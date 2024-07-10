@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:magic_hat/core/di.dart';
+import 'package:magic_hat/presentation/initial/screens/initial_screen.dart';
+import 'package:magic_hat/theme/app_theme.dart';
 
 void main() async {
   await initGetIt();
@@ -11,12 +13,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      theme: AppTheme.lightTheme,
+      home: const InitialScreen(),
     );
   }
 }
