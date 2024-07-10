@@ -1,1 +1,3 @@
-# Magic-Hat
+# magic_hat
+
+A new Flutter project.
