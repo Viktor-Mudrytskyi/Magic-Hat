@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:magic_hat/core/di.dart';
 
-void main() {
+void main() async {
+  await initGetIt();
   runApp(const MainApp());
 }
 
