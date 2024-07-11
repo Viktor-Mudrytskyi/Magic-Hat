@@ -44,7 +44,7 @@ class RavenclawHouseDto extends HouseDto {
 class HufflepuffHouseDto extends HouseDto {
   HufflepuffHouseDto()
       : super(
-          houseName: 'Gryffindor',
+          houseName: 'Hufflepuff',
           assetPath: AppImages.hufflepuff,
         );
 }
