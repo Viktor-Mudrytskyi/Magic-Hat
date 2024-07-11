@@ -39,7 +39,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
               imageUrl: e.image ?? '',
             ),
           )
-          .where((e) => e.houseName.isEmpty)
           .toList();
       final randInt = _randomManager.getNextInt(dtos.length);
       emit(
