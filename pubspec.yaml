@@ -15,6 +15,7 @@ dependencies:
   freezed_annotation: ^2.4.3
   json_annotation: ^4.9.0
   json_serializable: ^6.8.0
+  spider: ^4.2.2
 
   # Api  
   dio: ^5.5.0+1
@@ -25,6 +26,7 @@ dependencies:
 
   # State management
   flutter_bloc: ^8.1.6
+  cached_network_image: ^3.3.1
 
 dev_dependencies:
   flutter_test:
@@ -35,3 +37,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/images/

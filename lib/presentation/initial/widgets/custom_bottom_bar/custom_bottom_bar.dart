@@ -24,7 +24,7 @@ class CustomBottomBar extends StatelessWidget {
             decoration: const BoxDecoration(
               border: Border(
                 top: BorderSide(
-                  color: Colors.grey,
+                  color: Colors.black,
                   width: 1,
                 ),
               ),
