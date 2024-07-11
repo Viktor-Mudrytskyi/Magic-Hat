@@ -11,6 +11,15 @@ class ImageWidget extends StatelessWidget {
       imageUrl: url,
       width: 160,
       height: 230,
+      errorWidget: const Center(
+        child: Text(
+          '?',
+          style: TextStyle(
+            fontSize: 50,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
     );
   }
 }

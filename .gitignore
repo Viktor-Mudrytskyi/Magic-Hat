@@ -895,3 +895,4 @@ linux/
 macos/
 web/
 windows/
+.flutter-plugins-dependencies
