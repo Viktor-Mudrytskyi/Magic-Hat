@@ -40,7 +40,7 @@ class AffiliationTileWidget extends StatelessWidget {
                   ),
                 if (house.assetPath.isNotEmpty) const SizedBox(height: 6),
                 Text(
-                  house.houseName,
+                  house.displayName,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),

@@ -46,7 +46,7 @@ class AppCachedImage extends StatelessWidget {
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black),
             ),
-            child: const AppProgressIndicator(),
+            child: const Center(child: AppProgressIndicator()),
           );
         },
         fadeOutDuration: Duration.zero,
