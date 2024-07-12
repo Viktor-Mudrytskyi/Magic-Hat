@@ -42,11 +42,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSize {
                 ),
                 Expanded(
                   child: Center(
-                    child: Text(
-                      title,
-                      style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
+                    child: FittedBox(
+                      child: Text(
+                        title,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),

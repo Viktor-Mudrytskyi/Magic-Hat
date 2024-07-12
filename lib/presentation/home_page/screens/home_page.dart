@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:magic_hat/core/di.dart';
 import 'package:magic_hat/presentation/home_page/bloc/home_bloc.dart';
 import 'package:magic_hat/presentation/home_page/dtos/character_dto.dart';
 import 'package:magic_hat/presentation/home_page/dtos/house_dto.dart';
@@ -16,50 +15,47 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => getIt<HomeBloc>()..add(const HomeEvent.init()),
-      child: BlocBuilder<HomeBloc, HomeState>(
-        builder: (context, state) {
-          return Scaffold(
-            appBar: CustomAppBar(
-              title: 'Home Screen',
-              trailing: state.maybeMap(
-                orElse: () => null,
-                loaded: (value) => InkButton(
+    return BlocBuilder<HomeBloc, HomeState>(
+      builder: (context, state) {
+        return Scaffold(
+          appBar: CustomAppBar(
+            title: 'Home Screen',
+            trailing: state.maybeMap(
+              orElse: () => null,
+              loaded: (value) => InkButton(
+                onPressed: () {
+                  context.read<HomeBloc>().add(const HomeEvent.reset());
+                },
+                child: const Text('Reset'),
+              ),
+            ),
+          ),
+          body: state.map(
+            loading: (_) => const Center(
+              child: AppProgressIndicator(),
+            ),
+            loaded: (loaded) => _Loaded(
+              current: loaded.current,
+              total: loaded.total,
+              success: loaded.success,
+              failed: loaded.failed,
+            ),
+            error: (error) => Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text('Something went wrong...'),
+                const SizedBox(height: 20),
+                InkButton(
+                  child: const Text('Restart'),
                   onPressed: () {
-                    context.read<HomeBloc>().add(const HomeEvent.reset());
+                    context.read<HomeBloc>().add(const HomeEvent.init());
                   },
-                  child: const Text('Reset'),
                 ),
-              ),
+              ],
             ),
-            body: state.map(
-              loading: (_) => const Center(
-                child: AppProgressIndicator(),
-              ),
-              loaded: (loaded) => _Loaded(
-                current: loaded.current,
-                total: loaded.total,
-                success: loaded.success,
-                failed: loaded.failed,
-              ),
-              error: (error) => Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text('Something went wrong...'),
-                  const SizedBox(height: 20),
-                  InkButton(
-                    child: const Text('Restart'),
-                    onPressed: () {
-                      context.read<HomeBloc>().add(const HomeEvent.init());
-                    },
-                  ),
-                ],
-              ),
-            ),
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }

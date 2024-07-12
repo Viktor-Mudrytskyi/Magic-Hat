@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:magic_hat/core/di.dart';
+import 'package:magic_hat/presentation/home_page/bloc/home_bloc.dart';
 import 'package:magic_hat/presentation/home_page/screens/home_page.dart';
 import 'package:magic_hat/presentation/initial/widgets/custom_bottom_bar/custom_bottom_bar.dart';
 import 'package:magic_hat/presentation/initial/widgets/custom_bottom_bar/custom_bottom_bar_cubit/custom_bottom_bar_cubit.dart';
@@ -13,8 +14,15 @@ class InitialScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => getIt<CustomBottomBarCubit>(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => getIt<CustomBottomBarCubit>(),
+        ),
+        BlocProvider(
+          create: (context) => getIt<HomeBloc>()..add(const HomeEvent.init()),
+        ),
+      ],
       child: BlocBuilder<CustomBottomBarCubit, CustomBottomBarState>(
         builder: (context, state) {
           return Scaffold(
