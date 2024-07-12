@@ -4,8 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:magic_hat/core/managers/random_manager.dart';
 import 'package:magic_hat/data/characters/repositories/characters_repository.dart';
-import 'package:magic_hat/presentation/home_page/dto/character_dto.dart';
-import 'package:magic_hat/presentation/home_page/dto/house_dto.dart';
+import 'package:magic_hat/presentation/home_page/dtos/character_dto.dart';
+import 'package:magic_hat/presentation/home_page/dtos/house_dto.dart';
 
 part 'home_bloc.freezed.dart';
 part 'home_event.dart';
@@ -34,8 +34,13 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       final dtos = models
           .map(
             (e) => CharacterDto(
-              e.house ?? '',
-              fullName: e.name ?? '',
+              houseName: e.house ?? '-',
+              actorName: e.actor ?? '-',
+              attempts: 0,
+              birthDate: e.dateOfBirth ?? '-',
+              hasGuessed: false,
+              species: e.species ?? '-',
+              fullName: e.name ?? '-',
               imageUrl: e.image ?? '',
             ),
           )

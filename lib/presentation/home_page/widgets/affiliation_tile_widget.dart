@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:magic_hat/presentation/home_page/dto/house_dto.dart';
+import 'package:magic_hat/presentation/home_page/dtos/house_dto.dart';
 
 class AffiliationTileWidget extends StatelessWidget {
   const AffiliationTileWidget({

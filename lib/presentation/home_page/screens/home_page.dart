@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:magic_hat/core/di.dart';
 import 'package:magic_hat/presentation/home_page/bloc/home_bloc.dart';
-import 'package:magic_hat/presentation/home_page/dto/character_dto.dart';
-import 'package:magic_hat/presentation/home_page/dto/house_dto.dart';
+import 'package:magic_hat/presentation/home_page/dtos/character_dto.dart';
+import 'package:magic_hat/presentation/home_page/dtos/house_dto.dart';
 import 'package:magic_hat/presentation/home_page/widgets/affiliation_tile_widget.dart';
 import 'package:magic_hat/presentation/home_page/widgets/image_widget.dart';
-import 'package:magic_hat/presentation/home_page/widgets/score_tile_widget.dart';
 import 'package:magic_hat/presentation/widgets/app_progress_indicator.dart';
+import 'package:magic_hat/presentation/widgets/counter_row.dart';
 import 'package:magic_hat/presentation/widgets/custom_app_bar.dart';
 import 'package:magic_hat/presentation/widgets/ink_button.dart';
 
@@ -91,30 +91,10 @@ class _Loaded extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: ScoreTileWidget(
-                      title: 'Total',
-                      score: total,
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                  Expanded(
-                    child: ScoreTileWidget(
-                      title: 'Success',
-                      score: success,
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                  Expanded(
-                    child: ScoreTileWidget(
-                      title: 'Failed',
-                      score: failed,
-                    ),
-                  ),
-                ],
+              CounterRow(
+                total: total,
+                success: success,
+                failed: failed,
               ),
               const SizedBox(height: 30),
               ImageWidget(

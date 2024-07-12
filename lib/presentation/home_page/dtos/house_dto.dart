@@ -1,10 +1,11 @@
 import 'package:magic_hat/theme/resources.dart';
 
 sealed class HouseDto {
-  const HouseDto(
-      {required this.houseName,
-      required this.assetPath,
-      required this.displayName});
+  const HouseDto({
+    required this.houseName,
+    required this.assetPath,
+    required this.displayName,
+  });
 
   factory HouseDto.fromHouseName(String houseName) {
     return switch (houseName) {

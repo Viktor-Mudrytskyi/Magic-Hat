@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSize {
-  const CustomAppBar(
-      {required this.title, super.key, this.leading, this.trailing});
+  const CustomAppBar({
+    required this.title,
+    super.key,
+    this.leading,
+    this.trailing,
+  });
   final String title;
   final Widget? leading;
   final Widget? trailing;
@@ -24,21 +28,26 @@ class CustomAppBar extends StatelessWidget implements PreferredSize {
             ),
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+            padding: const EdgeInsets.symmetric(
+              vertical: 8,
+              horizontal: 6,
+            ),
             child: Row(
               children: [
                 Expanded(
                   child: Align(
-                    alignment: Alignment.centerRight,
+                    alignment: Alignment.centerLeft,
                     child: leading ?? const Offstage(),
                   ),
                 ),
                 Expanded(
-                  child: Text(
-                    title,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                  child: Center(
+                    child: Text(
+                      title,
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
