@@ -6,10 +6,12 @@ class ApptextField extends StatelessWidget {
     super.key,
     this.hint,
     this.suffixIcon,
+    this.initialValue,
   });
   final void Function(String newVal)? onChanged;
   final String? hint;
   final Widget? suffixIcon;
+  final String? initialValue;
 
   static final _defaultBorder = OutlineInputBorder(
     borderSide: const BorderSide(color: Colors.black, width: 1.5),
@@ -18,8 +20,9 @@ class ApptextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       onChanged: onChanged,
+      initialValue: initialValue,
       cursorColor: Colors.grey.shade600,
       decoration: InputDecoration(
         border: _defaultBorder,

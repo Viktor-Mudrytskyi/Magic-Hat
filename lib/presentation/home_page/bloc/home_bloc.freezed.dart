@@ -22,6 +22,8 @@ mixin _$HomeEvent {
     required TResult Function() reset,
     required TResult Function() refreshCharacter,
     required TResult Function(HouseDto house) chooseHouse,
+    required TResult Function(String query) searchByName,
+    required TResult Function(CharacterDto character) selectCharacter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +32,8 @@ mixin _$HomeEvent {
     TResult? Function()? reset,
     TResult? Function()? refreshCharacter,
     TResult? Function(HouseDto house)? chooseHouse,
+    TResult? Function(String query)? searchByName,
+    TResult? Function(CharacterDto character)? selectCharacter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +42,8 @@ mixin _$HomeEvent {
     TResult Function()? reset,
     TResult Function()? refreshCharacter,
     TResult Function(HouseDto house)? chooseHouse,
+    TResult Function(String query)? searchByName,
+    TResult Function(CharacterDto character)? selectCharacter,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +53,8 @@ mixin _$HomeEvent {
     required TResult Function(_HomeResetEvent value) reset,
     required TResult Function(_HomeRefreshCharEvent value) refreshCharacter,
     required TResult Function(_HomeChooseHouseEvent value) chooseHouse,
+    required TResult Function(_HomeSearchByNameEvent value) searchByName,
+    required TResult Function(_HomeSelectCharacterEvent value) selectCharacter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +63,8 @@ mixin _$HomeEvent {
     TResult? Function(_HomeResetEvent value)? reset,
     TResult? Function(_HomeRefreshCharEvent value)? refreshCharacter,
     TResult? Function(_HomeChooseHouseEvent value)? chooseHouse,
+    TResult? Function(_HomeSearchByNameEvent value)? searchByName,
+    TResult? Function(_HomeSelectCharacterEvent value)? selectCharacter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +73,8 @@ mixin _$HomeEvent {
     TResult Function(_HomeResetEvent value)? reset,
     TResult Function(_HomeRefreshCharEvent value)? refreshCharacter,
     TResult Function(_HomeChooseHouseEvent value)? chooseHouse,
+    TResult Function(_HomeSearchByNameEvent value)? searchByName,
+    TResult Function(_HomeSelectCharacterEvent value)? selectCharacter,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,6 +139,8 @@ class _$HomeInitEventImpl implements _HomeInitEvent {
     required TResult Function() reset,
     required TResult Function() refreshCharacter,
     required TResult Function(HouseDto house) chooseHouse,
+    required TResult Function(String query) searchByName,
+    required TResult Function(CharacterDto character) selectCharacter,
   }) {
     return init();
   }
@@ -138,6 +152,8 @@ class _$HomeInitEventImpl implements _HomeInitEvent {
     TResult? Function()? reset,
     TResult? Function()? refreshCharacter,
     TResult? Function(HouseDto house)? chooseHouse,
+    TResult? Function(String query)? searchByName,
+    TResult? Function(CharacterDto character)? selectCharacter,
   }) {
     return init?.call();
   }
@@ -149,6 +165,8 @@ class _$HomeInitEventImpl implements _HomeInitEvent {
     TResult Function()? reset,
     TResult Function()? refreshCharacter,
     TResult Function(HouseDto house)? chooseHouse,
+    TResult Function(String query)? searchByName,
+    TResult Function(CharacterDto character)? selectCharacter,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -164,6 +182,8 @@ class _$HomeInitEventImpl implements _HomeInitEvent {
     required TResult Function(_HomeResetEvent value) reset,
     required TResult Function(_HomeRefreshCharEvent value) refreshCharacter,
     required TResult Function(_HomeChooseHouseEvent value) chooseHouse,
+    required TResult Function(_HomeSearchByNameEvent value) searchByName,
+    required TResult Function(_HomeSelectCharacterEvent value) selectCharacter,
   }) {
     return init(this);
   }
@@ -175,6 +195,8 @@ class _$HomeInitEventImpl implements _HomeInitEvent {
     TResult? Function(_HomeResetEvent value)? reset,
     TResult? Function(_HomeRefreshCharEvent value)? refreshCharacter,
     TResult? Function(_HomeChooseHouseEvent value)? chooseHouse,
+    TResult? Function(_HomeSearchByNameEvent value)? searchByName,
+    TResult? Function(_HomeSelectCharacterEvent value)? selectCharacter,
   }) {
     return init?.call(this);
   }
@@ -186,6 +208,8 @@ class _$HomeInitEventImpl implements _HomeInitEvent {
     TResult Function(_HomeResetEvent value)? reset,
     TResult Function(_HomeRefreshCharEvent value)? refreshCharacter,
     TResult Function(_HomeChooseHouseEvent value)? chooseHouse,
+    TResult Function(_HomeSearchByNameEvent value)? searchByName,
+    TResult Function(_HomeSelectCharacterEvent value)? selectCharacter,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -241,6 +265,8 @@ class _$HomeResetEventImpl implements _HomeResetEvent {
     required TResult Function() reset,
     required TResult Function() refreshCharacter,
     required TResult Function(HouseDto house) chooseHouse,
+    required TResult Function(String query) searchByName,
+    required TResult Function(CharacterDto character) selectCharacter,
   }) {
     return reset();
   }
@@ -252,6 +278,8 @@ class _$HomeResetEventImpl implements _HomeResetEvent {
     TResult? Function()? reset,
     TResult? Function()? refreshCharacter,
     TResult? Function(HouseDto house)? chooseHouse,
+    TResult? Function(String query)? searchByName,
+    TResult? Function(CharacterDto character)? selectCharacter,
   }) {
     return reset?.call();
   }
@@ -263,6 +291,8 @@ class _$HomeResetEventImpl implements _HomeResetEvent {
     TResult Function()? reset,
     TResult Function()? refreshCharacter,
     TResult Function(HouseDto house)? chooseHouse,
+    TResult Function(String query)? searchByName,
+    TResult Function(CharacterDto character)? selectCharacter,
     required TResult orElse(),
   }) {
     if (reset != null) {
@@ -278,6 +308,8 @@ class _$HomeResetEventImpl implements _HomeResetEvent {
     required TResult Function(_HomeResetEvent value) reset,
     required TResult Function(_HomeRefreshCharEvent value) refreshCharacter,
     required TResult Function(_HomeChooseHouseEvent value) chooseHouse,
+    required TResult Function(_HomeSearchByNameEvent value) searchByName,
+    required TResult Function(_HomeSelectCharacterEvent value) selectCharacter,
   }) {
     return reset(this);
   }
@@ -289,6 +321,8 @@ class _$HomeResetEventImpl implements _HomeResetEvent {
     TResult? Function(_HomeResetEvent value)? reset,
     TResult? Function(_HomeRefreshCharEvent value)? refreshCharacter,
     TResult? Function(_HomeChooseHouseEvent value)? chooseHouse,
+    TResult? Function(_HomeSearchByNameEvent value)? searchByName,
+    TResult? Function(_HomeSelectCharacterEvent value)? selectCharacter,
   }) {
     return reset?.call(this);
   }
@@ -300,6 +334,8 @@ class _$HomeResetEventImpl implements _HomeResetEvent {
     TResult Function(_HomeResetEvent value)? reset,
     TResult Function(_HomeRefreshCharEvent value)? refreshCharacter,
     TResult Function(_HomeChooseHouseEvent value)? chooseHouse,
+    TResult Function(_HomeSearchByNameEvent value)? searchByName,
+    TResult Function(_HomeSelectCharacterEvent value)? selectCharacter,
     required TResult orElse(),
   }) {
     if (reset != null) {
@@ -356,6 +392,8 @@ class _$HomeRefreshCharEventImpl implements _HomeRefreshCharEvent {
     required TResult Function() reset,
     required TResult Function() refreshCharacter,
     required TResult Function(HouseDto house) chooseHouse,
+    required TResult Function(String query) searchByName,
+    required TResult Function(CharacterDto character) selectCharacter,
   }) {
     return refreshCharacter();
   }
@@ -367,6 +405,8 @@ class _$HomeRefreshCharEventImpl implements _HomeRefreshCharEvent {
     TResult? Function()? reset,
     TResult? Function()? refreshCharacter,
     TResult? Function(HouseDto house)? chooseHouse,
+    TResult? Function(String query)? searchByName,
+    TResult? Function(CharacterDto character)? selectCharacter,
   }) {
     return refreshCharacter?.call();
   }
@@ -378,6 +418,8 @@ class _$HomeRefreshCharEventImpl implements _HomeRefreshCharEvent {
     TResult Function()? reset,
     TResult Function()? refreshCharacter,
     TResult Function(HouseDto house)? chooseHouse,
+    TResult Function(String query)? searchByName,
+    TResult Function(CharacterDto character)? selectCharacter,
     required TResult orElse(),
   }) {
     if (refreshCharacter != null) {
@@ -393,6 +435,8 @@ class _$HomeRefreshCharEventImpl implements _HomeRefreshCharEvent {
     required TResult Function(_HomeResetEvent value) reset,
     required TResult Function(_HomeRefreshCharEvent value) refreshCharacter,
     required TResult Function(_HomeChooseHouseEvent value) chooseHouse,
+    required TResult Function(_HomeSearchByNameEvent value) searchByName,
+    required TResult Function(_HomeSelectCharacterEvent value) selectCharacter,
   }) {
     return refreshCharacter(this);
   }
@@ -404,6 +448,8 @@ class _$HomeRefreshCharEventImpl implements _HomeRefreshCharEvent {
     TResult? Function(_HomeResetEvent value)? reset,
     TResult? Function(_HomeRefreshCharEvent value)? refreshCharacter,
     TResult? Function(_HomeChooseHouseEvent value)? chooseHouse,
+    TResult? Function(_HomeSearchByNameEvent value)? searchByName,
+    TResult? Function(_HomeSelectCharacterEvent value)? selectCharacter,
   }) {
     return refreshCharacter?.call(this);
   }
@@ -415,6 +461,8 @@ class _$HomeRefreshCharEventImpl implements _HomeRefreshCharEvent {
     TResult Function(_HomeResetEvent value)? reset,
     TResult Function(_HomeRefreshCharEvent value)? refreshCharacter,
     TResult Function(_HomeChooseHouseEvent value)? chooseHouse,
+    TResult Function(_HomeSearchByNameEvent value)? searchByName,
+    TResult Function(_HomeSelectCharacterEvent value)? selectCharacter,
     required TResult orElse(),
   }) {
     if (refreshCharacter != null) {
@@ -498,6 +546,8 @@ class _$HomeChooseHouseEventImpl implements _HomeChooseHouseEvent {
     required TResult Function() reset,
     required TResult Function() refreshCharacter,
     required TResult Function(HouseDto house) chooseHouse,
+    required TResult Function(String query) searchByName,
+    required TResult Function(CharacterDto character) selectCharacter,
   }) {
     return chooseHouse(house);
   }
@@ -509,6 +559,8 @@ class _$HomeChooseHouseEventImpl implements _HomeChooseHouseEvent {
     TResult? Function()? reset,
     TResult? Function()? refreshCharacter,
     TResult? Function(HouseDto house)? chooseHouse,
+    TResult? Function(String query)? searchByName,
+    TResult? Function(CharacterDto character)? selectCharacter,
   }) {
     return chooseHouse?.call(house);
   }
@@ -520,6 +572,8 @@ class _$HomeChooseHouseEventImpl implements _HomeChooseHouseEvent {
     TResult Function()? reset,
     TResult Function()? refreshCharacter,
     TResult Function(HouseDto house)? chooseHouse,
+    TResult Function(String query)? searchByName,
+    TResult Function(CharacterDto character)? selectCharacter,
     required TResult orElse(),
   }) {
     if (chooseHouse != null) {
@@ -535,6 +589,8 @@ class _$HomeChooseHouseEventImpl implements _HomeChooseHouseEvent {
     required TResult Function(_HomeResetEvent value) reset,
     required TResult Function(_HomeRefreshCharEvent value) refreshCharacter,
     required TResult Function(_HomeChooseHouseEvent value) chooseHouse,
+    required TResult Function(_HomeSearchByNameEvent value) searchByName,
+    required TResult Function(_HomeSelectCharacterEvent value) selectCharacter,
   }) {
     return chooseHouse(this);
   }
@@ -546,6 +602,8 @@ class _$HomeChooseHouseEventImpl implements _HomeChooseHouseEvent {
     TResult? Function(_HomeResetEvent value)? reset,
     TResult? Function(_HomeRefreshCharEvent value)? refreshCharacter,
     TResult? Function(_HomeChooseHouseEvent value)? chooseHouse,
+    TResult? Function(_HomeSearchByNameEvent value)? searchByName,
+    TResult? Function(_HomeSelectCharacterEvent value)? selectCharacter,
   }) {
     return chooseHouse?.call(this);
   }
@@ -557,6 +615,8 @@ class _$HomeChooseHouseEventImpl implements _HomeChooseHouseEvent {
     TResult Function(_HomeResetEvent value)? reset,
     TResult Function(_HomeRefreshCharEvent value)? refreshCharacter,
     TResult Function(_HomeChooseHouseEvent value)? chooseHouse,
+    TResult Function(_HomeSearchByNameEvent value)? searchByName,
+    TResult Function(_HomeSelectCharacterEvent value)? selectCharacter,
     required TResult orElse(),
   }) {
     if (chooseHouse != null) {
@@ -577,12 +637,341 @@ abstract class _HomeChooseHouseEvent implements HomeEvent {
 }
 
 /// @nodoc
+abstract class _$$HomeSearchByNameEventImplCopyWith<$Res> {
+  factory _$$HomeSearchByNameEventImplCopyWith(
+          _$HomeSearchByNameEventImpl value,
+          $Res Function(_$HomeSearchByNameEventImpl) then) =
+      __$$HomeSearchByNameEventImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String query});
+}
+
+/// @nodoc
+class __$$HomeSearchByNameEventImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$HomeSearchByNameEventImpl>
+    implements _$$HomeSearchByNameEventImplCopyWith<$Res> {
+  __$$HomeSearchByNameEventImplCopyWithImpl(_$HomeSearchByNameEventImpl _value,
+      $Res Function(_$HomeSearchByNameEventImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? query = null,
+  }) {
+    return _then(_$HomeSearchByNameEventImpl(
+      null == query
+          ? _value.query
+          : query // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$HomeSearchByNameEventImpl implements _HomeSearchByNameEvent {
+  const _$HomeSearchByNameEventImpl(this.query);
+
+  @override
+  final String query;
+
+  @override
+  String toString() {
+    return 'HomeEvent.searchByName(query: $query)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HomeSearchByNameEventImpl &&
+            (identical(other.query, query) || other.query == query));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, query);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$HomeSearchByNameEventImplCopyWith<_$HomeSearchByNameEventImpl>
+      get copyWith => __$$HomeSearchByNameEventImplCopyWithImpl<
+          _$HomeSearchByNameEventImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() init,
+    required TResult Function() reset,
+    required TResult Function() refreshCharacter,
+    required TResult Function(HouseDto house) chooseHouse,
+    required TResult Function(String query) searchByName,
+    required TResult Function(CharacterDto character) selectCharacter,
+  }) {
+    return searchByName(query);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? init,
+    TResult? Function()? reset,
+    TResult? Function()? refreshCharacter,
+    TResult? Function(HouseDto house)? chooseHouse,
+    TResult? Function(String query)? searchByName,
+    TResult? Function(CharacterDto character)? selectCharacter,
+  }) {
+    return searchByName?.call(query);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
+    TResult Function()? reset,
+    TResult Function()? refreshCharacter,
+    TResult Function(HouseDto house)? chooseHouse,
+    TResult Function(String query)? searchByName,
+    TResult Function(CharacterDto character)? selectCharacter,
+    required TResult orElse(),
+  }) {
+    if (searchByName != null) {
+      return searchByName(query);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_HomeInitEvent value) init,
+    required TResult Function(_HomeResetEvent value) reset,
+    required TResult Function(_HomeRefreshCharEvent value) refreshCharacter,
+    required TResult Function(_HomeChooseHouseEvent value) chooseHouse,
+    required TResult Function(_HomeSearchByNameEvent value) searchByName,
+    required TResult Function(_HomeSelectCharacterEvent value) selectCharacter,
+  }) {
+    return searchByName(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_HomeInitEvent value)? init,
+    TResult? Function(_HomeResetEvent value)? reset,
+    TResult? Function(_HomeRefreshCharEvent value)? refreshCharacter,
+    TResult? Function(_HomeChooseHouseEvent value)? chooseHouse,
+    TResult? Function(_HomeSearchByNameEvent value)? searchByName,
+    TResult? Function(_HomeSelectCharacterEvent value)? selectCharacter,
+  }) {
+    return searchByName?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_HomeInitEvent value)? init,
+    TResult Function(_HomeResetEvent value)? reset,
+    TResult Function(_HomeRefreshCharEvent value)? refreshCharacter,
+    TResult Function(_HomeChooseHouseEvent value)? chooseHouse,
+    TResult Function(_HomeSearchByNameEvent value)? searchByName,
+    TResult Function(_HomeSelectCharacterEvent value)? selectCharacter,
+    required TResult orElse(),
+  }) {
+    if (searchByName != null) {
+      return searchByName(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _HomeSearchByNameEvent implements HomeEvent {
+  const factory _HomeSearchByNameEvent(final String query) =
+      _$HomeSearchByNameEventImpl;
+
+  String get query;
+  @JsonKey(ignore: true)
+  _$$HomeSearchByNameEventImplCopyWith<_$HomeSearchByNameEventImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$HomeSelectCharacterEventImplCopyWith<$Res> {
+  factory _$$HomeSelectCharacterEventImplCopyWith(
+          _$HomeSelectCharacterEventImpl value,
+          $Res Function(_$HomeSelectCharacterEventImpl) then) =
+      __$$HomeSelectCharacterEventImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({CharacterDto character});
+}
+
+/// @nodoc
+class __$$HomeSelectCharacterEventImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$HomeSelectCharacterEventImpl>
+    implements _$$HomeSelectCharacterEventImplCopyWith<$Res> {
+  __$$HomeSelectCharacterEventImplCopyWithImpl(
+      _$HomeSelectCharacterEventImpl _value,
+      $Res Function(_$HomeSelectCharacterEventImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? character = null,
+  }) {
+    return _then(_$HomeSelectCharacterEventImpl(
+      null == character
+          ? _value.character
+          : character // ignore: cast_nullable_to_non_nullable
+              as CharacterDto,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$HomeSelectCharacterEventImpl implements _HomeSelectCharacterEvent {
+  const _$HomeSelectCharacterEventImpl(this.character);
+
+  @override
+  final CharacterDto character;
+
+  @override
+  String toString() {
+    return 'HomeEvent.selectCharacter(character: $character)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HomeSelectCharacterEventImpl &&
+            (identical(other.character, character) ||
+                other.character == character));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, character);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$HomeSelectCharacterEventImplCopyWith<_$HomeSelectCharacterEventImpl>
+      get copyWith => __$$HomeSelectCharacterEventImplCopyWithImpl<
+          _$HomeSelectCharacterEventImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() init,
+    required TResult Function() reset,
+    required TResult Function() refreshCharacter,
+    required TResult Function(HouseDto house) chooseHouse,
+    required TResult Function(String query) searchByName,
+    required TResult Function(CharacterDto character) selectCharacter,
+  }) {
+    return selectCharacter(character);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? init,
+    TResult? Function()? reset,
+    TResult? Function()? refreshCharacter,
+    TResult? Function(HouseDto house)? chooseHouse,
+    TResult? Function(String query)? searchByName,
+    TResult? Function(CharacterDto character)? selectCharacter,
+  }) {
+    return selectCharacter?.call(character);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
+    TResult Function()? reset,
+    TResult Function()? refreshCharacter,
+    TResult Function(HouseDto house)? chooseHouse,
+    TResult Function(String query)? searchByName,
+    TResult Function(CharacterDto character)? selectCharacter,
+    required TResult orElse(),
+  }) {
+    if (selectCharacter != null) {
+      return selectCharacter(character);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_HomeInitEvent value) init,
+    required TResult Function(_HomeResetEvent value) reset,
+    required TResult Function(_HomeRefreshCharEvent value) refreshCharacter,
+    required TResult Function(_HomeChooseHouseEvent value) chooseHouse,
+    required TResult Function(_HomeSearchByNameEvent value) searchByName,
+    required TResult Function(_HomeSelectCharacterEvent value) selectCharacter,
+  }) {
+    return selectCharacter(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_HomeInitEvent value)? init,
+    TResult? Function(_HomeResetEvent value)? reset,
+    TResult? Function(_HomeRefreshCharEvent value)? refreshCharacter,
+    TResult? Function(_HomeChooseHouseEvent value)? chooseHouse,
+    TResult? Function(_HomeSearchByNameEvent value)? searchByName,
+    TResult? Function(_HomeSelectCharacterEvent value)? selectCharacter,
+  }) {
+    return selectCharacter?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_HomeInitEvent value)? init,
+    TResult Function(_HomeResetEvent value)? reset,
+    TResult Function(_HomeRefreshCharEvent value)? refreshCharacter,
+    TResult Function(_HomeChooseHouseEvent value)? chooseHouse,
+    TResult Function(_HomeSearchByNameEvent value)? searchByName,
+    TResult Function(_HomeSelectCharacterEvent value)? selectCharacter,
+    required TResult orElse(),
+  }) {
+    if (selectCharacter != null) {
+      return selectCharacter(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _HomeSelectCharacterEvent implements HomeEvent {
+  const factory _HomeSelectCharacterEvent(final CharacterDto character) =
+      _$HomeSelectCharacterEventImpl;
+
+  CharacterDto get character;
+  @JsonKey(ignore: true)
+  _$$HomeSelectCharacterEventImplCopyWith<_$HomeSelectCharacterEventImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$HomeState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(List<CharacterDto> allCharacters,
-            CharacterDto current, int total, int success, int failed)
+    required TResult Function(
+            List<CharacterDto> allCharacters,
+            List<CharacterDto> filteredCharacters,
+            CharacterDto current,
+            int currentIndex,
+            int total,
+            int success,
+            int failed,
+            String searchString)
         loaded,
     required TResult Function() error,
   }) =>
@@ -590,8 +979,15 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<CharacterDto> allCharacters, CharacterDto current,
-            int total, int success, int failed)?
+    TResult? Function(
+            List<CharacterDto> allCharacters,
+            List<CharacterDto> filteredCharacters,
+            CharacterDto current,
+            int currentIndex,
+            int total,
+            int success,
+            int failed,
+            String searchString)?
         loaded,
     TResult? Function()? error,
   }) =>
@@ -599,8 +995,15 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<CharacterDto> allCharacters, CharacterDto current,
-            int total, int success, int failed)?
+    TResult Function(
+            List<CharacterDto> allCharacters,
+            List<CharacterDto> filteredCharacters,
+            CharacterDto current,
+            int currentIndex,
+            int total,
+            int success,
+            int failed,
+            String searchString)?
         loaded,
     TResult Function()? error,
     required TResult orElse(),
@@ -686,8 +1089,15 @@ class _$HomeLoadingStateImpl implements _HomeLoadingState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(List<CharacterDto> allCharacters,
-            CharacterDto current, int total, int success, int failed)
+    required TResult Function(
+            List<CharacterDto> allCharacters,
+            List<CharacterDto> filteredCharacters,
+            CharacterDto current,
+            int currentIndex,
+            int total,
+            int success,
+            int failed,
+            String searchString)
         loaded,
     required TResult Function() error,
   }) {
@@ -698,8 +1108,15 @@ class _$HomeLoadingStateImpl implements _HomeLoadingState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<CharacterDto> allCharacters, CharacterDto current,
-            int total, int success, int failed)?
+    TResult? Function(
+            List<CharacterDto> allCharacters,
+            List<CharacterDto> filteredCharacters,
+            CharacterDto current,
+            int currentIndex,
+            int total,
+            int success,
+            int failed,
+            String searchString)?
         loaded,
     TResult? Function()? error,
   }) {
@@ -710,8 +1127,15 @@ class _$HomeLoadingStateImpl implements _HomeLoadingState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<CharacterDto> allCharacters, CharacterDto current,
-            int total, int success, int failed)?
+    TResult Function(
+            List<CharacterDto> allCharacters,
+            List<CharacterDto> filteredCharacters,
+            CharacterDto current,
+            int currentIndex,
+            int total,
+            int success,
+            int failed,
+            String searchString)?
         loaded,
     TResult Function()? error,
     required TResult orElse(),
@@ -769,10 +1193,13 @@ abstract class _$$HomeLoadedStateImplCopyWith<$Res> {
   @useResult
   $Res call(
       {List<CharacterDto> allCharacters,
+      List<CharacterDto> filteredCharacters,
       CharacterDto current,
+      int currentIndex,
       int total,
       int success,
-      int failed});
+      int failed,
+      String searchString});
 }
 
 /// @nodoc
@@ -787,20 +1214,31 @@ class __$$HomeLoadedStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? allCharacters = null,
+    Object? filteredCharacters = null,
     Object? current = null,
+    Object? currentIndex = null,
     Object? total = null,
     Object? success = null,
     Object? failed = null,
+    Object? searchString = null,
   }) {
     return _then(_$HomeLoadedStateImpl(
       allCharacters: null == allCharacters
           ? _value._allCharacters
           : allCharacters // ignore: cast_nullable_to_non_nullable
               as List<CharacterDto>,
+      filteredCharacters: null == filteredCharacters
+          ? _value._filteredCharacters
+          : filteredCharacters // ignore: cast_nullable_to_non_nullable
+              as List<CharacterDto>,
       current: null == current
           ? _value.current
           : current // ignore: cast_nullable_to_non_nullable
               as CharacterDto,
+      currentIndex: null == currentIndex
+          ? _value.currentIndex
+          : currentIndex // ignore: cast_nullable_to_non_nullable
+              as int,
       total: null == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
@@ -813,6 +1251,10 @@ class __$$HomeLoadedStateImplCopyWithImpl<$Res>
           ? _value.failed
           : failed // ignore: cast_nullable_to_non_nullable
               as int,
+      searchString: null == searchString
+          ? _value.searchString
+          : searchString // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -822,11 +1264,15 @@ class __$$HomeLoadedStateImplCopyWithImpl<$Res>
 class _$HomeLoadedStateImpl implements _HomeLoadedState {
   const _$HomeLoadedStateImpl(
       {required final List<CharacterDto> allCharacters,
+      required final List<CharacterDto> filteredCharacters,
       required this.current,
+      required this.currentIndex,
       required this.total,
       required this.success,
-      required this.failed})
-      : _allCharacters = allCharacters;
+      required this.failed,
+      required this.searchString})
+      : _allCharacters = allCharacters,
+        _filteredCharacters = filteredCharacters;
 
   final List<CharacterDto> _allCharacters;
   @override
@@ -836,18 +1282,31 @@ class _$HomeLoadedStateImpl implements _HomeLoadedState {
     return EqualUnmodifiableListView(_allCharacters);
   }
 
+  final List<CharacterDto> _filteredCharacters;
+  @override
+  List<CharacterDto> get filteredCharacters {
+    if (_filteredCharacters is EqualUnmodifiableListView)
+      return _filteredCharacters;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_filteredCharacters);
+  }
+
   @override
   final CharacterDto current;
+  @override
+  final int currentIndex;
   @override
   final int total;
   @override
   final int success;
   @override
   final int failed;
+  @override
+  final String searchString;
 
   @override
   String toString() {
-    return 'HomeState.loaded(allCharacters: $allCharacters, current: $current, total: $total, success: $success, failed: $failed)';
+    return 'HomeState.loaded(allCharacters: $allCharacters, filteredCharacters: $filteredCharacters, current: $current, currentIndex: $currentIndex, total: $total, success: $success, failed: $failed, searchString: $searchString)';
   }
 
   @override
@@ -857,20 +1316,29 @@ class _$HomeLoadedStateImpl implements _HomeLoadedState {
             other is _$HomeLoadedStateImpl &&
             const DeepCollectionEquality()
                 .equals(other._allCharacters, _allCharacters) &&
+            const DeepCollectionEquality()
+                .equals(other._filteredCharacters, _filteredCharacters) &&
             (identical(other.current, current) || other.current == current) &&
+            (identical(other.currentIndex, currentIndex) ||
+                other.currentIndex == currentIndex) &&
             (identical(other.total, total) || other.total == total) &&
             (identical(other.success, success) || other.success == success) &&
-            (identical(other.failed, failed) || other.failed == failed));
+            (identical(other.failed, failed) || other.failed == failed) &&
+            (identical(other.searchString, searchString) ||
+                other.searchString == searchString));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_allCharacters),
+      const DeepCollectionEquality().hash(_filteredCharacters),
       current,
+      currentIndex,
       total,
       success,
-      failed);
+      failed,
+      searchString);
 
   @JsonKey(ignore: true)
   @override
@@ -883,38 +1351,62 @@ class _$HomeLoadedStateImpl implements _HomeLoadedState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(List<CharacterDto> allCharacters,
-            CharacterDto current, int total, int success, int failed)
+    required TResult Function(
+            List<CharacterDto> allCharacters,
+            List<CharacterDto> filteredCharacters,
+            CharacterDto current,
+            int currentIndex,
+            int total,
+            int success,
+            int failed,
+            String searchString)
         loaded,
     required TResult Function() error,
   }) {
-    return loaded(allCharacters, current, total, success, failed);
+    return loaded(allCharacters, filteredCharacters, current, currentIndex,
+        total, success, failed, searchString);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<CharacterDto> allCharacters, CharacterDto current,
-            int total, int success, int failed)?
+    TResult? Function(
+            List<CharacterDto> allCharacters,
+            List<CharacterDto> filteredCharacters,
+            CharacterDto current,
+            int currentIndex,
+            int total,
+            int success,
+            int failed,
+            String searchString)?
         loaded,
     TResult? Function()? error,
   }) {
-    return loaded?.call(allCharacters, current, total, success, failed);
+    return loaded?.call(allCharacters, filteredCharacters, current,
+        currentIndex, total, success, failed, searchString);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<CharacterDto> allCharacters, CharacterDto current,
-            int total, int success, int failed)?
+    TResult Function(
+            List<CharacterDto> allCharacters,
+            List<CharacterDto> filteredCharacters,
+            CharacterDto current,
+            int currentIndex,
+            int total,
+            int success,
+            int failed,
+            String searchString)?
         loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(allCharacters, current, total, success, failed);
+      return loaded(allCharacters, filteredCharacters, current, currentIndex,
+          total, success, failed, searchString);
     }
     return orElse();
   }
@@ -957,16 +1449,22 @@ class _$HomeLoadedStateImpl implements _HomeLoadedState {
 abstract class _HomeLoadedState implements HomeState {
   const factory _HomeLoadedState(
       {required final List<CharacterDto> allCharacters,
+      required final List<CharacterDto> filteredCharacters,
       required final CharacterDto current,
+      required final int currentIndex,
       required final int total,
       required final int success,
-      required final int failed}) = _$HomeLoadedStateImpl;
+      required final int failed,
+      required final String searchString}) = _$HomeLoadedStateImpl;
 
   List<CharacterDto> get allCharacters;
+  List<CharacterDto> get filteredCharacters;
   CharacterDto get current;
+  int get currentIndex;
   int get total;
   int get success;
   int get failed;
+  String get searchString;
   @JsonKey(ignore: true)
   _$$HomeLoadedStateImplCopyWith<_$HomeLoadedStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1011,8 +1509,15 @@ class _$HomeErrorStateImpl implements _HomeErrorState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(List<CharacterDto> allCharacters,
-            CharacterDto current, int total, int success, int failed)
+    required TResult Function(
+            List<CharacterDto> allCharacters,
+            List<CharacterDto> filteredCharacters,
+            CharacterDto current,
+            int currentIndex,
+            int total,
+            int success,
+            int failed,
+            String searchString)
         loaded,
     required TResult Function() error,
   }) {
@@ -1023,8 +1528,15 @@ class _$HomeErrorStateImpl implements _HomeErrorState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<CharacterDto> allCharacters, CharacterDto current,
-            int total, int success, int failed)?
+    TResult? Function(
+            List<CharacterDto> allCharacters,
+            List<CharacterDto> filteredCharacters,
+            CharacterDto current,
+            int currentIndex,
+            int total,
+            int success,
+            int failed,
+            String searchString)?
         loaded,
     TResult? Function()? error,
   }) {
@@ -1035,8 +1547,15 @@ class _$HomeErrorStateImpl implements _HomeErrorState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<CharacterDto> allCharacters, CharacterDto current,
-            int total, int success, int failed)?
+    TResult Function(
+            List<CharacterDto> allCharacters,
+            List<CharacterDto> filteredCharacters,
+            CharacterDto current,
+            int currentIndex,
+            int total,
+            int success,
+            int failed,
+            String searchString)?
         loaded,
     TResult Function()? error,
     required TResult orElse(),
