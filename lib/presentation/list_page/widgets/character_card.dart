@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:magic_hat/presentation/list_page/dtos/card_character_dto.dart';
+import 'package:magic_hat/presentation/home_page/dtos/character_dto.dart';
 import 'package:magic_hat/presentation/widgets/app_cached_image.dart';
 
 class CharacterCard extends StatelessWidget {
-  const CharacterCard(
-      {required this.dto,
-      required this.onTap,
-      required this.onPressRetry,
-      super.key});
-  final CardCharacterDto dto;
+  const CharacterCard({
+    required this.dto,
+    required this.onTap,
+    required this.onPressRetry,
+    super.key,
+  });
+  final CharacterDto dto;
   final void Function() onTap;
   final void Function() onPressRetry;
 

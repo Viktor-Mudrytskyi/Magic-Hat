@@ -34,8 +34,13 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       final dtos = models
           .map(
             (e) => CharacterDto(
-              e.house ?? '',
-              fullName: e.name ?? '',
+              houseName: e.house ?? '-',
+              actorName: e.actor ?? '-',
+              attempts: 0,
+              birthDate: e.dateOfBirth ?? '-',
+              hasGuessed: false,
+              species: e.species ?? '-',
+              fullName: e.name ?? '-',
               imageUrl: e.image ?? '',
             ),
           )

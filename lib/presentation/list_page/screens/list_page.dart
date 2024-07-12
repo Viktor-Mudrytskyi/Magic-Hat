@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:magic_hat/presentation/list_page/dtos/card_character_dto.dart';
+import 'package:magic_hat/presentation/home_page/dtos/character_dto.dart';
 import 'package:magic_hat/presentation/list_page/screens/character_view_screen.dart';
-import 'package:magic_hat/presentation/list_page/widgets/character_card.dart';
+import 'package:magic_hat/presentation/list_page/widgets/characters_sliver_list.dart';
 import 'package:magic_hat/presentation/list_page/widgets/search_field.dart';
 import 'package:magic_hat/presentation/widgets/counter_row.dart';
 import 'package:magic_hat/presentation/widgets/custom_app_bar.dart';
@@ -22,11 +22,11 @@ class ListPage extends StatelessWidget {
             child: const Text('Reset'),
           ),
         ),
-        body: CustomScrollView(
-          slivers: [
-            SliverPadding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              sliver: SliverList.list(
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: CustomScrollView(
+            slivers: [
+              SliverList.list(
                 children: [
                   const SizedBox(height: 30),
                   const CounterRow(
@@ -39,44 +39,42 @@ class ListPage extends StatelessWidget {
                     onChanged: (val) {},
                   ),
                   const SizedBox(height: 30),
-                  CharacterCard(
-                    onPressRetry: () {},
-                    onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return const CharacterViewScreen(
-                              dto: CardCharacterDto(
-                                actorName: 'Daniel',
-                                attempts: 2,
-                                birthDate: '888-888',
-                                fullName: 'Harry Potter',
-                                hasGuessed: false,
-                                houseName: 'Gryffindor',
-                                imageUrl:
-                                    'https://ik.imagekit.io/hpapi/harry.jpg',
-                                species: 'human',
-                              ),
-                            );
-                          },
-                        ),
-                      );
-                    },
-                    dto: const CardCharacterDto(
-                      actorName: 'Daniel',
-                      attempts: 2,
-                      birthDate: '888-888',
-                      fullName: 'Harry Potter',
-                      hasGuessed: false,
-                      houseName: 'Gryffindor',
-                      imageUrl: 'https://ik.imagekit.io/hpapi/harry.jpg',
-                      species: 'human',
-                    ),
-                  ),
                 ],
               ),
-            ),
-          ],
+              CharactersSliverList(
+                characters: const [
+                  CharacterDto(
+                    actorName: 'Daniel',
+                    attempts: 2,
+                    birthDate: '888-888',
+                    fullName: 'Harry Potter',
+                    hasGuessed: true,
+                    houseName: 'Gryffindor',
+                    imageUrl: 'https://ik.imagekit.io/hpapi/harry.jpg',
+                    species: 'human',
+                  ),
+                  CharacterDto(
+                    actorName: 'Daniel',
+                    attempts: 2,
+                    birthDate: '888-888',
+                    fullName: 'Harry Potter',
+                    hasGuessed: false,
+                    houseName: 'Gryffindor',
+                    imageUrl: 'https://ik.imagekit.io/hpapi/harry.jpg',
+                    species: 'human',
+                  ),
+                ],
+                onCardTap: (dto) {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => CharacterViewScreen(dto: dto),
+                    ),
+                  );
+                },
+                onRetryTap: (dto) {},
+              ),
+            ],
+          ),
         ),
       ),
     );
